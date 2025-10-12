@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="kor">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="2415347 윤서영", content="산성비 게임">
+        <title>산성비 게임</title>
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&" />
+        <style>
+            body {
+                background-color: #1A1A1AD9
+            }
+
+            .header {
+                background-color: #1a1a1a;
+                color: white;
+            }
+
+            .aside {
+                background-color: #1a1a1a;
+                color: white;
+                position: relative;
+                left: 80vw;
+            }
+
+            .material-symbols-outlined { /*음악 아이콘*/
+                color: white;
+                font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <header> <!--헤더-->
+            <div class="header">
+                <div><button id="finish" name="finish" type="button" onclick="">학습종료</button></div>
+                <div>Voca(####)</div>
+            </div>
+        </header>
+        
+
+        <article> <!--메인화면-->
+            <section>
+                <audio id="audio" src="#" loop></audio>
+                <button id="audioOnOff" name="audioOnOff" type="button" onclick="">
+                    <span class="material-symbols-outlined" alt="음악 아이콘">
+                        volume_up  <!--음악 켜짐 아이콘-->
+                        <!--volume_off-->  <!--음악 꺼짐 아이콘-->
+                    </span>
+                </button>
+            </section>
+
+            <section class="words">
+                <!--영단어들 들어갈 자리-->
+            </section>
+
+            <input id="user_input" name="user_input" type="text" placeholder="영단어를 입력하세요">
+        </article>
+
+
+        <aside> <!--사용자 정보-->
+            <div class="aside">
+                <div class="img_box"><img class="img" src="#" alt="캐릭터"></div>
+                <div>####</div>
+                <div>점수 | ##점</div>
+                <div>체력 | ###</div>
+            </div>
+        </aside>
+    </body>
+</html>
