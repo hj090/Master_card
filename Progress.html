@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="2410562 임효주" content="Progress">
+    <title>Progress</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+    <style>
+        body{
+            background-color: white;
+        }
+        .name{
+            text-align: center;
+            font-size: 15px;
+            display: flex;
+        }
+        article{
+            color: #3D8D7A;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: white;
+            height: 300px;
+            weight: 400px;
+            border-style: solid;
+            border-color: black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="VocaMain.html"><span class="material-symbols-outlined">arrow_back</span></a>
+        <a href="VocaMain.html"></a><span class="material-symbols-outlined">Home</span></a>
+        <!-- 역화살표, 홈 아이콘 클릭 시 View.html화면으로 넘어가도록 -->
+        <!-- for CSS: 버튼을 누르고 난 후에도 색이 바뀌지 않아야 이쁠 것 같음! -->
+        <h1 class="name">학습현황</h1>
+    </header><hr>
+    <main>
+        <article>
+            <div class="main card">
+                <h2>
+                    <p>A</p>
+                    <span>Voca(단어장 이름)</span>
+                </h2>
+                <p>
+                    <span>0</span> 단어 |
+                    <span>제작자 이름</span>
+                </p>
+            </div>
+
+            <div class="progress-bar">
+                <span>학습 진행률</span>
+                <div class="bar" style="--pct:40%"></div>
+                <span>10/245</span>
+            </div>
+
+            <span class="trophy-icon">🏆</span>
+            
+            <div class="game-score">
+                <div class="matching-game-score">
+                    매칭게임 score : <strong data-role="matchScore">0</strong>
+                </div>
+                <div class="Acidrain-game-score">
+                    산성비 게임 score : <strong data-role="">0</strong>
+                </div>
+            </div>
+        </article>
+    </main>
+    
+</body>
+</html>
