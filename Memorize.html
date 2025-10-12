@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="2410562 임효주" content="Memorize">
+    <title>Memorize</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+
+    <style>
+        body{
+            background-color: #1A1A1AD9
+        }
+
+        header{
+            background-color: #1a1a1a;
+            color: white;
+            
+        }
+
+        .name{
+            text-align: center;
+            font-size: 15px;
+            display: flex;
+        }
+        #current, #total{
+            color: white;
+            font-size: 10px;
+        }
+
+        footer{
+            color: white;
+            font-size: 10px;
+        }
+
+        article{
+            padding: 20px;
+            border-radius: 10px;
+            background-color: white;
+            height: 300px;
+            weight: 400px;
+        }
+
+        .btn-success{
+            background-color: #b6d97e;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="OverView.html"><span class="material-symbols-outlined">arrow_back</span></a>
+        <span>학습종료</span>
+        <h1 class="name">Voca(단어장 이름)</h1>
+    </header>
+
+    <main>
+        <section>
+            <p>
+                <span id="current">1 |</span>
+                <span id="total">245(전체 단어 개수)</span>
+            </p>
+        </section>
+        
+        <article>
+            <button class="icon" type="button" aria-label="발음 듣기">
+                <span class="material-symbols-outlined" aria-hidden="true">volume_up</span>
+            </button>
+            <button class="icon-star" type="button" aria-label="즐겨찾기">
+                <span class="material-symbols-outlined" aria-hidden="true">Kid_star</span>
+            </button>
+
+            <div>
+                <p>word</p>
+            </div>
+
+            <details class="reveal">
+                <summary>
+                    커버를 클릭하여 의미를 확인하세요 <br>
+                    <small>Press SPACE</small>
+                </summary>
+                <div>
+                    <p>단어</p>
+                </div>
+            </details>
+        </article>
+
+        <footer>
+                <small>다음 이동 →</small>
+        </footer>
+        
+        <div class="actions">
+            <button class="btn-success" type="button">이제 알아요</button>
+            <button class="btn-later" type="button">나중에 한 번 더</button>
+        </div>
+    </main>
+    
+</body>
+</html>
