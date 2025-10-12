@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="kor">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="2415347 윤서영", content="산성비 게임">
+        <title>산성비 게임</title>
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&" />
+        <style>
+            body {
+                background-color: white
+            }
+
+            .header {
+                background-color: #3D8D7A;  /*그라데이션 #A3D1C6*/
+                color: white;
+            }
+
+            .aside {
+                background-color: white;
+                color: #1A1A1AB2;
+                border: black solid 1px;
+            }
+
+            .logo {
+                color: #3D8D7A;
+            }
+
+            .material-symbols-outlined {
+                color: #1A1A1AB2;
+                font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24;
+            }
+
+            .wordbook {
+                color: #3D8D7A;
+                border: 1px solid #1A1A1A;
+                border-radius: 8px;
+                font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24;
+            }
+
+            .wordbook:hover {
+                background-color: #B3D8A880;
+            }
+
+            .wordbook_icon {
+                color: #B3D87A;
+                font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24;
+            }
+
+            .progress {
+                display: inline-block;
+                width: 150px;
+                height: 18px;
+                border-radius: 5px;
+                background-color: #A3D1C6;
+            }
+
+            .progress::after {
+                content: '';
+                display: block;
+                width: 70%; /*학습 진행률에 따라 % 조정*/
+                height: 100%;
+                border-radius: 5px;
+                background-color: #3D8D7A;
+            }
+
+            .progress_icon_back {
+                width: 35px;
+                height: 35px;
+                background-color: #3D8D7A;
+                border-radius: 50%;
+                outline: 7px solid white;
+                outline-offset: -5px;
+            }
+            
+            .footer {
+                background-color: white;
+                color: #1A1A1AB2;
+                border: black solid 1px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <div class="header">
+                <div id="title">English(복습단어)</div>
+                <div id="review">#####(##)</div>
+            </div>
+        </header>
+
+        <aside>
+            <div class="aside">
+                <div class="logo">Master<br>Card</div>
+                <div><img src="#" alt="캐릭터">###</div>
+                <div><span class="material-symbols-outlined">search</span>단어장 검색</div>
+                <div><span class="material-symbols-outlined">add</span>단어장 추가</div>
+            </div>
+        </aside>
+
+        <article>
+            <section class="wordbook_box">
+                <div class="wordbook">
+                    <span class="material-symbols-outlined wordbook_icon">font_download</span>
+                    <span style="font-size: 30px;">Voca(###)</span>
+                    <span style="font-size: 15px;">## 단어 | ###</span>
+                    <span style="font-weight: bold;">매칭 게임 score: #</span>
+                    <span style="font-weight: bold;">학습 진행률</span>
+                    <span class="progress" id="progress"></span>
+                    <span class="material-symbols-outlined progress_icon_back progress_icon"></span>
+                    <span class="material-symbols-outlined progress_icon" style="color: white;">rewarded_ads</span>
+                    <span style="font-weight: bold;">산성비 게임 score: #</span>
+                </div>
+            </section>
+
+        <footer class="footer">
+            <div class="footer_content">
+                <span class="logo">Master<br>Card</span>
+                <span>숙명여자대학교 인공지능공학부 웹프로그래밍</span>
+                <span>2410562 임효주 hyojuuu@sookmyung.ac.kr</span>
+                <span>2415347 윤서영 bella050325@sookmyung.ac.kr</span>
+                <span>2311692 송유민 ippunsong2@sookmyung.ac.kr</span>
+                <span>2410552 임유미 dladbal24@sookmyung.ac.kr</span>
+                <span>2415461 이예빈 yeye0809@sookmyung.ac.kr</span>
+
+                <span>소개</span>
+                <span><a href="#">노션</a></span>
+                <span><a href="#">깃허브</a></span>
+                <span><a href="#">더 많은 정보</a></span>
+            </div>
+
+            <div id="copyright">ⓒOvoca All rights reserved.</div>
+        </footer>
+    </body>
+</html>
