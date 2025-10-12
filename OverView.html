@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="2410552 임유미" content="OverView">
+    <title>OverView</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+    <style>
+        .home {
+            font-size: 70px;
+            margin-top: 40px;
+        }
+        body{
+            background-color: white;
+        }
+        
+        /*progress class CSS 부분은 VocaMain.html에서 서영님이 만들어주신 부분 그대로 따왔는데, CSS에서 코드 정리할 때는 외부 스타일 시트로 해서 파일 통일하면 편할 것 같습니다.*/
+        .progress {
+            display: inline-block;
+            width: 150px;
+            height: 18px;
+            border-radius: 5px;
+            background-color: #A3D1C6;
+        }
+        .progress::after {
+                content: '';
+                display: block;
+                width: 70%; /*학습 진행률에 따라 % 조정*/
+                height: 100%;
+                border-radius: 5px;
+                background-color: #3D8D7A;
+            }
+            .progress_icon_back {
+                width: 35px;
+                height: 35px;
+                background-color: #3D8D7A;
+                border-radius: 50%;
+                outline: 7px solid white;
+                outline-offset: -5px;
+            }
+
+        header {
+            background-color: white;
+            height: 150px;
+            width: max-content;
+        }
+        #voca_title{
+            height: 300px;
+            background: linear-gradient(to right, #A3D1C6, #3D8D7A);
+            border: 1px solid black;
+        }
+        #card_menu {
+            border: 1px solid #3D8D7A;
+            height: 100px;
+            background-color: #B3D87A50;
+        }
+
+        .word{
+            border: 1px solid #1A1A1A;
+        }
+        .container{
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="VocaMain.html"><span class="material-symbols-outlined home">arrow_back</span></a>
+        <a href="VocaMain.html"><span class="material-symbols-outlined home">Home</span></a>
+    </header><hr>
+    <main>
+        <article id="voca">
+            <div id="voca_title">
+                <h1>Voca(단어장 이름)</h1>
+                <h3>###단어 | nickname</h3>
+                <h4><a href="#">편집</a> | <a href="#">인쇄</a> | <a href="#">내보내기</a> | <a href="#">삭제</a> | <a href="#">신고</a></h4>
+                    <span style="font-weight: bold;">학습 진행률</span>
+                    <span class="progress" id="progress"></span>
+                    <span class="material-symbols-outlined progress_icon_back progress_icon"></span>
+                    <span class="material-symbols-outlined progress_icon" style="color: white;">rewarded_ads</span>
+            </div>
+
+            <form method="get" action="#">
+                <span>
+                <select name="학습구간" size="1" id="section">
+                    <option value="all_cards">전체카드 학습</option>
+                    <option value="important_cards">중요카드만 학습</option>
+                    <option value="ten_cards">구간 단위로 학습(10개)</option>
+                </select>
+                <input type="checkbox">뜻 보기
+                </span>
+                <div id="card_menu">
+                    <input type="button" value="뒷면보기" class="green_button">
+                    <input type="button" value="암기 학습" id="white_button">
+                    <input type="button" value="매칭 게임" class="green_button">
+                    <input type="button" value="산성비 게임" class="green_button">
+                </div>
+                <form method="get" action="#">
+                    <div class="container">
+                        <!--체크박스를 별표로 만들어서 체크했을 때 체워지면 좋을 것 같은데 어렵다면 그냥 체크박스로 놔둬도 될 것 같습니다!-->
+                        <!--단어카드 div 12개 만들어놨는데 4개씩 3줄로 나열해주세요!-->
+                        <div class="word">
+                            <input type="checkbox" value="1">
+                            word
+                        </div>
+                        <div class="word">
+                            <input type="checkbox" value="2">
+                            word
+                        </div>
+                        <div class="word">
+                            <input type="checkbox" value="3">
+                            word
+                        </div>
+                        <div class="word">
+                            <input type="checkbox" value="4">
+                            word
+                        </div>
+
+                                                <div class="word">
+                            <input type="checkbox" value="1">
+                            word
+                        </div>
+                        <div class="word">
+                            <input type="checkbox" value="2">
+                            word
+                        </div>
+                        <div class="word">
+                            <input type="checkbox" value="3">
+                            word
+                        </div>
+                        <div class="word">
+                            <input type="checkbox" value="4">
+                            word
+                        </div>
+
+                                                <div class="word">
+                            <input type="checkbox" value="1">
+                            word
+                        </div>
+                        <div class="word">
+                            <input type="checkbox" value="2">
+                            word
+                        </div>
+                        <div class="word">
+                            <input type="checkbox" value="3">
+                            word
+                        </div>
+                        <div class="word">
+                            <input type="checkbox" value="4">
+                            word
+                        </div>
+                </div>
+                </form>
+            </form>
+        </article>
+    </main>
+    
+</body>
+</html>
