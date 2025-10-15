@@ -1,0 +1,279 @@
+/*overview css*/
+.home {
+    font-size: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/*구분 위해 클래스 추가*/
+body.body-overview{
+    background-color: white;
+}
+/*기존 프로그레스 바 이용 (기존보다 약간 길게 변형)*/        
+.progress {
+    display: inline-block;
+    width: 300px;
+    height: 18px;
+    border-radius: 5px;
+    background-color: #A3D1C6;
+}
+.progress::after {
+    content: '';
+    display: block;
+    width: 70%; /*학습 진행률에 따라 % 조정*/
+    height: 100%;
+    border-radius: 5px;
+    background-color: #3D8D7A;
+}
+.progress_icon_back {
+    width: 35px;
+    height: 35px;
+    background-color: #3D8D7A;
+    border-radius: 50%;
+    outline: 7px solid white;
+    outline-offset: -5px;
+}
+.back {
+    background-color: white;
+    height: 80px;
+    width: max-content;
+}
+/*타이틀영역 구조 정리*/
+#voca_title{
+    height: 250px;
+    background: linear-gradient(to right, #A3D1C6, #3D8D7A);
+    color: white;
+    display:flex;
+    align-items: stretch;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+/*왼쪽 묶음*/
+#voca_title .vt-left{
+    flex:1;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/*오른쪽 묶음*/
+#voca_title .vt-right{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+/*구조 변경(폭을 좀더 좁게)*/
+#card_menu {
+    border: 1px solid #3D8D7A;
+    height: 100px;
+    background-color: #B3D87A50;
+    margin-bottom: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    border-radius: 8px;
+}
+/*구조 변경(폭을 좀더 좁게)*/
+.container{
+    display: flex;
+    width: 1400px;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-left: 30px;
+}
+/*각 카드 스타일 너비 변경*/
+.word{
+    border: 1px solid #1A1A1A;
+    width: 313px;
+    height: 175px;
+    border-radius: 8px;
+}
+/*글자 크기 변경 및 정렬*/
+#voca_name{
+    font-weight: 900;
+    font-size: 60px;
+    margin-top: 50px;
+    margin-left: 100px;
+}
+#voca_info{
+    font-weight: 400;
+    font-size: 30px;
+    margin-left: 100px;
+}
+/*편집 인쇄 등 부분 흰색으로 통일 및 정렬*/
+#extra_info{
+    text-align: right;
+    align-self: flex-end;
+    margin-right: 100px;
+    margin-bottom: 20px;
+    color: white;
+}
+#extra_info a{color: white; text-decoration: none;}
+#extra_info a:visited{color:white;}
+#extra_info a:hover{color:white;}
+#extra_info a:active{color: white;}
+.progress_part{
+    text-align: right;
+    align-self: flex-end;
+    margin-right: 100px;
+    margin-top: 60px;
+}
+#section{
+    margin-left: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+/*버튼에 스타일 추가 및 위치 정렬*/
+.green_button{
+    background-color: #3D8D7A;
+    color: white;
+    border: 2px solid #3D8D7A;
+    border-radius: 8px;
+}
+#white_button{
+    background-color: white;
+    color: #3D8D7A;
+    border: 2px solid #3D8D7A;
+    border-radius: 8px;
+}
+#left_button{
+    margin-left: 30px;
+    margin-top: 30px;
+}
+.right_buttons{
+    text-align: right;
+    margin-top: -25px;
+    margin-right: 30px;
+}
+.material-symbols-outlined progress_icon{color: white;}
+.word_content{text-align: center; margin-top: 50px;}
+
+/*vocamain*/
+/*구분을 위해 body에 클래스 추가, 위치 정렬 위해 그리드 레이아웃 추가*/
+body.body-vocamain {
+    background-color: white;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "aside header" "aside article" "footer footer"; 
+}
+.header {
+    background: linear-gradient(to right, #A3D1C6, #3D8D7A); /*그라데이션 추가*/
+    color: white;
+    height: 250px;
+}
+/*기존 스타일 이용*/
+.aside {background-color: white;color: #1A1A1AB2;}
+aside{
+    border: black solid 1px;
+    border-bottom: none;
+    grid-area: aside;
+}
+.logo {color: #3D8D7A;}
+.material-symbols-outlined {
+    color: #1A1A1AB2;
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+}
+.wordbook {
+    color: #3D8D7A;
+    border: 1px solid #1A1A1A;
+    border-radius: 8px;
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+    margin: 20px;
+}
+.wordbook:hover {
+    background-color: #B3D8A880;
+}
+.wordbook_icon {
+    color: #B3D87A;
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+}  
+/*footer 부분 정렬 위해 flex사용*/         
+.footer { 
+    background-color: white; 
+    color: #1A1A1AB2; 
+    border: black solid 1px; 
+} 
+.footer .footer_content{ 
+    display: flex; 
+    justify-content: space-between; 
+    gap:32px; 
+    padding: 24px 24px; 
+    flex-wrap:wrap; 
+} 
+.footer .info{
+    min-width: 260px; 
+    flex:1 1 420px;
+} 
+.footer .links{
+    width:220px; 
+    flex:0 0 220px;
+} 
+.footer .logo{
+    display:block; 
+    font-weight:700; 
+    font-size:30px; 
+    line-height: 1.2; 
+    margin-bottom:8px;
+} 
+.footer a{color: #1A1A1AB2; } 
+.footer a:hover{text-decoration: underline;} 
+#copyright {text-align: center; padding: 12px 0 18px; opacity:.8;}
+/*그리드 레이아웃 이용시 사용한 부분*/
+header{grid-area: header;}
+aside{grid-area: aside;}
+article{grid-area: article;}
+footer{grid-area:footer;}
+/*aside 부분 정렬 위해 사용*/
+.aside * {
+    text-align: right;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+    padding-right: 18px;
+    padding-bottom: 10px;
+}
+/*위치 정렬 부분 추가*/
+#title{
+    font-weight: 900;
+    font-size: 60px;
+    padding: 30px 10px 10px 20px
+}
+#review{
+    font-weight: 400;
+    font-size: 30px;
+    padding: 10px 10px 10px 20px
+}
+#game_score{
+    font-weight: bold;
+    text-align: right;
+}
+/*flex를 활용한 정렬 부분 추가*/
+.wordbook {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    gap: 26px;
+    height: 160px;
+}
+.wordbook_center {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 8px;
+    flex: 1;
+}
+#wordbook_name{font-size: 35px;text-align: left;}
+#wordbook_info{font-size: 15px;text-align: left;}
+#progress_word{font-weight: bold;}
