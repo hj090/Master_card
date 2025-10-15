@@ -36,6 +36,7 @@ body.body-overview{
     outline-offset: -5px;
     vertical-align: middle;
 }
+.material-symbols-outlined.home{color:#1A1A1A !important;}
 #progress_icon_vocamain{
     display: inline-flex;
     align-items: center;
