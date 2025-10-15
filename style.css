@@ -9,6 +9,7 @@ body.body-overview{
     background-color: white;
 }
 /*기존 프로그레스 바 이용 (기존보다 약간 길게 변형)*/        
+/*프로그레스바 위치 정렬*/
 .progress {
     display: inline-block;
     width: 300px;
@@ -25,12 +26,47 @@ body.body-overview{
     background-color: #3D8D7A;
 }
 .progress_icon_back {
-    width: 35px;
-    height: 35px;
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
     background-color: #3D8D7A;
     border-radius: 50%;
     outline: 7px solid white;
     outline-offset: -5px;
+    vertical-align: middle;
+}
+#progress_icon_vocamain{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin-left: -44px;
+    z-index:1;
+    vertical-align: middle;
+    color: white;
+}
+#progress_icon_overview{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin-left: -40px;
+    z-index:1;
+    vertical-align: middle;
+    color: white;
+}
+
+/*아이콘 색깔 흰색으로 변경*/
+.material-symbols-outlined{
+    color: white !important;
+    font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
 .back {
     background-color: white;
@@ -68,8 +104,8 @@ body.body-overview{
     height: 100px;
     background-color: #B3D87A50;
     margin-bottom: 30px;
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: 140px;
+    margin-right: 140px;
     border-radius: 8px;
 }
 /*구조 변경(폭을 좀더 좁게)*/
@@ -78,12 +114,12 @@ body.body-overview{
     width: 1400px;
     gap: 30px;
     flex-wrap: wrap;
-    margin-left: 30px;
+    margin-left: 143px;
 }
 /*각 카드 스타일 너비 변경*/
 .word{
     border: 1px solid #1A1A1A;
-    width: 313px;
+    width: 256px;
     height: 175px;
     border-radius: 8px;
 }
@@ -111,14 +147,17 @@ body.body-overview{
 #extra_info a:visited{color:white;}
 #extra_info a:hover{color:white;}
 #extra_info a:active{color: white;}
+
 .progress_part{
-    text-align: right;
-    align-self: flex-end;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
     margin-right: 100px;
     margin-top: 60px;
 }
+
 #section{
-    margin-left: 30px;
+    margin-left: 140px;
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -144,8 +183,16 @@ body.body-overview{
     margin-top: -25px;
     margin-right: 30px;
 }
-.material-symbols-outlined progress_icon{color: white;}
-.word_content{text-align: center; margin-top: 50px;}
+.word_content{text-align: center; margin-top: 30px; font-size: 30px;}
+/*체크박스 버튼 디자인 추가*/
+input[type="checkbox"]{
+    transform: scale(1.7);
+    accent-color: #3D8D7A;
+    margin-top: 17px;
+    margin-left: 17px;
+}
+/*뜻보기 글자 정렬*/
+#definition{margin-left: 10px;}
 
 /*vocamain*/
 /*구분을 위해 body에 클래스 추가, 위치 정렬 위해 그리드 레이아웃 추가*/
@@ -192,7 +239,7 @@ aside{
     background-color: #B3D8A880;
 }
 .wordbook_icon {
-    color: #B3D87A;
+    color: #B3D87A !important;
     font-variation-settings:
     'FILL' 0,
     'wght' 400,
