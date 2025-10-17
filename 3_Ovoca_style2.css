@@ -1,0 +1,493 @@
+
+/*memorize.html*/
+
+/*  HTML <style> 태그에서 가져온 기본 스타일 및 배경색 */
+body {
+    background-color: #1A1A1AD9; 
+    display: flex; /* 요소 중앙 정렬을 위해 추가 */
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    min-height: 100vh;
+    padding-top: 150px; /* 고정 헤더 높이만큼 여백 확보 */
+}
+
+
+/*Header Styles */
+header {
+    background-color: #1a1a1a; 
+    color: white; 
+    height: 150px; 
+    width: 1920px; 
+    display: flex;
+    align-items: center;
+    padding: 0 40px; 
+    box-sizing: border-box; 
+    position: fixed; /* 헤더 고정 */
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+/* 뒤로 가기 아이콘과 학습종료 텍스트를 담는 왼쪽 영역 */
+header > a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white; 
+    font-size: 24px;
+    gap: 10px;
+}
+header > a > span:last-child {
+    font-size: 24px;
+    margin-left: -5px; 
+}
+
+/* Header 아이콘 스타일 */
+header .material-symbols-outlined {
+    font-size: 30px;
+    color: white !important; 
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Voca(단어장 이름) 제목 스타일 */
+.name {
+    font-weight: bold;
+    margin: 0;
+   
+    position: absolute; 
+    top: 62px;      
+    left: 751px;    
+    
+}
+
+/*  Main Content Styles */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* 단어 개수 섹션 정렬 (가운데 정렬) */
+main section {
+    width: 900px; /* 카드 너비와 일치 */
+    text-align: center; /* 가운데 정렬 */
+    margin-top: 20px;
+}
+main section p {
+    margin: 0;
+}
+#current, #total {
+    color: white !important; /* 기존 color: white; 유지 */
+    font-size: 14px !important; /* 기존 10px 덮어쓰기 */
+}
+#current { margin-right: 5px; }
+
+/* 카드 */
+article {
+    /* 기존 HTML <style>에서 가져옴 */
+    padding: 20px; 
+    border-radius: 10px;
+    background-color: white; 
+    
+    width: 900px !important;  
+    height: 550px !important;
+    padding: 0 !important; /* 내부 패딩 제거 (기존 padding: 20px 덮어쓰기) */
+    
+    margin-top: 30px; 
+    position: relative;
+    overflow: hidden; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 아이콘 (발음, 즐겨찾기) 위치 및 색상 */
+article .icon, article .icon-star {
+    position: absolute;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10;
+}
+article .icon { top: 20px; left: 20px; }
+article .icon-star { top: 20px; right: 20px; }
+article .material-symbols-outlined {
+    color: #1A1A1A !important; /* 아이콘 색상 검은색 */
+    font-size: 30px;
+}
+
+/* 'word' 텍스트 중앙 정렬 */
+article > div:nth-child(3) { 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%); 
+    text-align: center;
+    width: 100%;
+}
+article > div:nth-child(3) p {
+    font-size: 48px;
+    font-weight: bold;
+    color: #1A1A1A;
+    margin: 0;
+}
+
+/* 뜻 확인 영역 (details) 스타일: 하단 절반 배경 */
+.reveal {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50%; /* 550px의 50% */
+    background-color: #B3D87A; 
+    border-radius: 0 0 10px 10px;
+}
+.reveal summary {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    list-style: none;
+    padding: 0;
+}
+.reveal summary::-webkit-details-marker { display: none; }
+.reveal summary small {
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+/* 다음 이동 텍스트 (footer) 위치 조정 */
+footer {
+    /* 기존 color: white; font-size: 10px; 유지 */
+    width: 900px;
+    margin-top: 15px;
+    text-align: right;
+    color: white !important; 
+    font-size: 14px !important; /* 10px 덮어쓰기 */
+}
+
+
+/* Button Styles (392x106px) */
+
+.actions {
+    width: 900px; 
+    margin-top: 20px; 
+    display: flex;
+    justify-content: space-between; 
+    gap: 16px; 
+    padding-bottom: 50px; 
+}
+
+/* 이제알아요 + 나중에 한번더 버튼 스타일 */
+.actions button {
+    width: 392px;  
+    height: 106px; 
+    border-radius: 8px;
+    border: none;
+    font-size: 24px; 
+    font-weight: bold;
+    cursor: pointer;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    gap: 10px; 
+}
+
+/* 이제 알아요 버튼 스타일 및 색상 */
+.btn-success { 
+    background-color: #A0C06A !important; /* 기존 #b6d97e 덮어쓰기 */
+    color: white !important; 
+} 
+
+/* 나중에 한 번 더 버튼 스타일 및 색상 */
+.btn-later { 
+    background-color: white !important; 
+    color: #1A1A1A !important; 
+    border: 1px solid #D9D9D9; 
+}
+
+/* 버튼 내부 아이콘 스타일 */
+.actions button .material-symbols-outlined {
+    font-size: 30px;
+    color: inherit !important; 
+}
+.btn-success .material-symbols-outlined {
+    color: white !important;
+}
+
+
+
+/*matching game css*/
+
+
+/*  기본 스타일 및 배경색 */
+
+body {
+    background-color: #1A1A1AD9; 
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    margin: 0;
+    padding-top: 150px; /* 고정 헤더 공간 확보 */
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    width: 100%;
+}
+
+
+/* Header Styles (Memorize.html과 동일한 재정의 필요 부분) memorize css에 정의된 것이 그대로 적용 */
+
+
+/* MatchingGame 전용 아이콘 색상 및 텍스트 스타일 */
+header a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    gap: 10px;
+}
+header a span:last-child {
+    font-size: 24px;
+    margin-left: -5px;
+}
+
+/* Score Styles */
+
+.score {
+    color: white; 
+    font-size: 24px; 
+    font-weight: bold;
+    /* 카드 4개 너비 + 간격 3개에 맞게 너비 계산: (350*4) + (15*3) = 1445px */
+    width: 1445px; 
+    text-align: left; /* Score 텍스트는 좌측 정렬 */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/*  Card Styles (3행 4열 Grid) */
+
+.cards-container {
+    display: grid;
+    /* 4열, 각 열 350px, 간격 15px */
+    grid-template-columns: repeat(4, 350px);
+    gap: 15px; 
+    width: fit-content; /* 총 너비 1445px */
+    margin: 0 auto 50px auto; 
+}
+
+.card {
+    width: 350px; 
+    height: 175px;
+    border-radius: 8px;
+    border: 1px solid #1A1A1A30; 
+    font-size: 30px; 
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;   /*움직임을 부드럽게 */
+}
+
+/* 카드 버튼 추가: 마우스 오버 시 2% 확대 */
+.card:hover {
+    transform: scale(1.02); 
+}
+
+/* 영어 카드 (흰색) */
+.eng-card {
+    background-color: white;
+    color: #1A1A1A;
+    border: none;
+}
+
+/* 한글 카드 (초록색) */
+.kor-card {
+    background-color: #3D8D7A;
+    color: white;
+    border: none;
+}
+
+
+/*AcidGame*/
+/* acidrain-layout: 헤더 바로 아래에 빈 공간 없이 위치하고 화면 높이를 꽉 채우도록 설정 */
+.acidrain-layout {
+   
+    position: absolute; 
+
+    left: 0;             
+    width: 100%;         
+    bottom: 0;           
+    display: flex;       
+    flex-direction: row; 
+
+    background-color: #1A1A1AD9; 
+
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* 2. article (게임 영역): main의 남은 가로 공간과 세로 높이를 꽉 채움 */
+.acidrain-layout article {
+    top: 0px;    
+    flex-grow: 1;         
+    height: 100%;         
+    margin-right: 20px; 
+    background-color: transparent !important; 
+    box-shadow: none !important; 
+    border-radius: 0 !important; 
+
+    padding: 0 !important; 
+}
+
+.game-area {
+    /* height: 100%; 이 이미 설정되어 있지만, 혹시 몰라 추가 */
+    height: 100%; 
+  
+}
+
+
+
+/* #audioOnOff: 스피커 아이콘 (정사각형 및 좌측 상단 위치) */
+#audioOnOff {
+    width: 45px; 
+    height: 45px;
+    position: absolute;
+    top: 20px; 
+    left: 20px; 
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+}
+
+#audioOnOff .material-symbols-outlined {
+    color: white !important;
+}
+
+/* #user_input: textfield (테두리 표시 및 가운데 아래 배치) */
+#user_input {
+    position: absolute; 
+    bottom: 20px; 
+    left: 50%;          
+    transform: translateX(-50%); 
+    width: 60%; 
+    padding: 15px;
+    border-radius: 5px;
+    
+    
+    border: 2px solid #1A1A1AD9; 
+    
+    box-sizing: border-box;
+    font-size: 20px;
+    background-color: white; 
+    color: white; 
+    text-align: center;
+}
+
+/*bar (사용자 정보 영역): 세로 중앙 정렬 유지 */
+.bar {
+    width: 400px;
+    flex-shrink: 0;
+    
+    /* 화면 높이를 꽉 채우도록 100%로 유지 */
+    height: 100%;
+    
+    background-color: #1A1A1AD9; 
+    padding: 70px 0 0 0; /* 상단 70px 여백 추가, 나머지 0 */
+    
+    box-sizing: border-box; 
+    display: flex;
+    flex-direction: column;
+
+    align-items: center; 
+    justify-content: flex-start; 
+}
+
+/*  user-info-box (실제 콘텐츠 컨테이너) */
+.user-info-box {
+    width: 100%; 
+    height: fit-content; 
+    
+    background-color: transparent !important; 
+    color: white;
+    padding: 20px; 
+    
+    box-sizing: border-box;
+    border-radius: 5px;
+    max-width: 400px;
+    
+    /*  중앙 정렬 마진 제거 */
+    margin: 0; 
+}
+
+.aside {
+    background-color: transparent !important;
+}
+
+
+/* 이미지 및 상세 정보 스타일 */
+.user-info-box .img_box {
+    width: 300px; 
+    height: 300px; 
+    margin: 0 auto 10px auto; 
+    overflow: hidden; 
+    background-color: white; 
+    border-radius: 5px;
+}
+.user-info-box .img_box .img {
+    width: 100%;   
+    height: 100%;  
+    object-fit: cover; 
+    display: block; 
+}
+
+/* 사용자 명, 점수, 체력 텍스트 좌측 정렬 */
+.user-details {
+    padding:0 0 0 10px; 
+    align-items: center;/* 좌측에 약간의 여백 추가 */
+}
+.username{
+    text-align: left;
+    font-size: xx-large;
+}
+
+
+.score-hp {
+    /* block으로 설정하여 점수와 체력이 세로로 나열 */
+    display: block; 
+    margin-top: 10px;
+}
+
+
+.score-hp div {
+    margin-bottom: 5px;
+    text-align: left; 
+    font-size: larger;
+}
+
+/* 단어 위치 조정 */
+.word-rain {
+    position: absolute; 
+    color: #ffffff;
+    font-size: 24px;
+}
+.word-rain.w1 { top: 15%; left: 15%; }
+.word-rain.w2 { top: 30%; left: 40%; }
+.word-rain.w3 { top: 10%; right: 20%; }
+.word-rain.w4 { top: 50%; left: 20%; }
+.word-rain.w5 { top: 70%; left: 5%; }
