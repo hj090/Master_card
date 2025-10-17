@@ -6,11 +6,9 @@
         <title>산성비 게임</title>
 
         <link rel="stylesheet" href="3_Ovoca_style2.css"> <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&" />
-
-    
     </head>
-    
-    <body>
+
+    <body class="body_acid">
        
         <header> <a href="3_Ovoca_OverView.html">
                 <span class="material-symbols-outlined">arrow_back</span>
@@ -19,40 +17,33 @@
             <h1 class="name">Voca(단어장 이름)</h1>
         </header>
         
-        <main class="acidrain-layout">
-            <article> <section class="game-area">
+        
+        <article class="article_acid">
+            <section class="game-area">
+                <audio id="audio" src="#" loop></audio>
                     <button id="audioOnOff" name="audioOnOff" type="button">
-                        <span class="material-symbols-outlined" alt="음악 아이콘">
-                            volume_up
-                        </span>
+                        <span class="material-symbols-outlined">volume_up</span>
                     </button>
-                    <audio id="audio" src="#" loop></audio>
 
-                    <div class="word-rain w1">단어</div>
-                    <div class="word-rain w2">단어</div>
-                    <div class="word-rain w3">단어</div>
-                    <div class="word-rain w4">단어</div>
-                    <div class="word-rain w5">단어</div>
-                    
-                    <input class="textfield" id="user_input" name="user_input" type="text" placeholder="영어단어를 입력하세요">
+                <section class="words">         
+                    <div class="w1">단어</div>
+                    <div class="w2">단어</div>
+                    <div class="w3">단어</div>                
+                    <div class="w4">단어</div>
+                    <div class="w5">단어</div>
                 </section>
-            </article>
 
-            <div class="bar"> 
-                <div class="aside"> 
-                    <div class="user-info-box">
-                        <div class="img_box"><img class="img" src="공대송이.png" alt="캐릭터"></div>
-                        <div class="user-details">
-                            <div class="username">사용자 명</div>
-                        
-                            <div class="score-hp">
-                                <div>점수 | <span id="game_score">1000점</span></div>
-                                <div>체력 | <span id="hp">100</span></div>
-                            </div>
-                        </div>
-                    </div>
+                <input class="textfield" id="user_input" name="user_input" type="text" placeholder="영어단어를 입력하세요">
+            </section>
+
+            <aside>
+                <div class="img_box"><img class="img" src="공대송이.png" alt="캐릭터"></div>
+                <div class="text">
+                    <h1>공대송이</h1>
+                    <h3>점수 | 1000점</h3>
+                    <h3>체력 | 100</h3>
                 </div>
-            </div>
-        </main>
+            </aside>
+        </article>
     </body>
 </html>
