@@ -4,52 +4,17 @@
     <meta charset="UTF-8">
     <meta name="2410562 임효주" content="Memorize">
     <title>Memorize</title>
+    <link rel="stylesheet" href="style2.css"> 
+    
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
 
-    <style>
-        body{
-            background-color: #1A1A1AD9
-        }
-
-        header{
-            background-color: #1a1a1a;
-            color: white;
-            
-        }
-
-        .name{
-            text-align: center;
-            font-size: 15px;
-            display: flex;
-        }
-        #current, #total{
-            color: white;
-            font-size: 10px;
-        }
-
-        footer{
-            color: white;
-            font-size: 10px;
-        }
-
-        article{
-            padding: 20px;
-            border-radius: 10px;
-            background-color: white;
-            height: 300px;
-            weight: 400px;
-        }
-
-        .btn-success{
-            background-color: #b6d97e;
-            color: white;
-        }
-    </style>
-</head>
+    </head>
 <body>
     <header>
-        <a href="OverView.html"><span class="material-symbols-outlined">arrow_back</span></a>
-        <span>학습종료</span>
+        <a href="OverView.html">
+            <span class="material-symbols-outlined">arrow_back</span>
+            <span>학습종료</span>
+        </a>
         <h1 class="name">Voca(단어장 이름)</h1>
     </header>
 
@@ -66,7 +31,7 @@
                 <span class="material-symbols-outlined" aria-hidden="true">volume_up</span>
             </button>
             <button class="icon-star" type="button" aria-label="즐겨찾기">
-                <span class="material-symbols-outlined" aria-hidden="true">Kid_star</span>
+                <span class="material-symbols-outlined" aria-hidden="true">star</span>
             </button>
 
             <div>
@@ -89,8 +54,14 @@
         </footer>
         
         <div class="actions">
-            <button class="btn-success" type="button">이제 알아요</button>
-            <button class="btn-later" type="button">나중에 한 번 더</button>
+            <button class="btn-success" type="button">
+                <span class="material-symbols-outlined">done</span>
+                이제 알아요
+            </button>
+            <button class="btn-later" type="button">
+                <span class="material-symbols-outlined">schedule</span>
+                나중에 한 번 더
+            </button>
         </div>
     </main>
     
