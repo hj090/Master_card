@@ -7,15 +7,18 @@
 /*구분 위해 클래스 추가*/
 body.body-overview{
     background-color: white;
+    min-width: 1200px;
 }
 /*기존 프로그레스 바 이용 (기존보다 약간 길게 변형)*/        
 /*프로그레스바 위치 정렬*/
 .progress {
+    position: relative;
     display: inline-block;
     width: 300px;
     height: 18px;
     border-radius: 5px;
     background-color: #A3D1C6;
+    overflow:hidden
 }
 .progress::after {
     content: '';
@@ -35,21 +38,20 @@ body.body-overview{
     outline: 7px solid white;
     outline-offset: -5px;
     vertical-align: middle;
+
+    margin-left: -18px;
+}
+.progress::before{
+    content: attr(data-label);        /* ex) "172/245" */
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 700;
+    font-size: 12px;
+    color: white;                     /* 이미지처럼 흰색 */
+    pointer-events: none;
 }
 .material-symbols-outlined.home{color:#1A1A1A !important;}
-#progress_icon_vocamain{
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 22px;
-    position: relative;
-    width: 40px;
-    height: 40px;
-    margin-left: -44px;
-    z-index:1;
-    vertical-align: middle;
-    color: white;
-}
 #progress_icon_overview{
     display: inline-flex;
     align-items: center;
@@ -60,7 +62,19 @@ body.body-overview{
     height: 40px;
     margin-left: -40px;
     z-index:1;
-    vertical-align: middle;
+    color: white;
+}
+#progress_icon_vocamain{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin-left: -44.5px;
+    z-index:1;
+    top:8px;
     color: white;
 }
 
@@ -69,10 +83,11 @@ body.body-overview{
     color: white !important;
     font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
-.back {
-    background-color: white;
-    height: 80px;
-    width: max-content;
+/*높이를 다른 css와 통일*/
+.back{
+    display: inline-flex; 
+    align-items: center;
+    height: 87px;
 }
 /*타이틀영역 구조 정리*/
 #voca_title{
@@ -198,6 +213,7 @@ input[type="checkbox"]{
 /*vocamain*/
 /*구분을 위해 body에 클래스 추가, 위치 정렬 위해 그리드 레이아웃 추가*/
 body.body-vocamain {
+    min-width: 1200px;
     background-color: white;
     display: grid;
     grid-template-columns: 300px 1fr;
@@ -209,14 +225,25 @@ body.body-vocamain {
     color: white;
     height: 250px;
 }
+
 /*기존 스타일 이용*/
-.aside {background-color: white;color: #1A1A1AB2;}
+.aside {background-color: white; color: #1A1A1AB2;}
+#user_name {
+    display: flex;
+    align-items: center; /* 이미지와 글자 수직 가운데 정렬 */
+    gap: 0px; 
+    margin-bottom: 30px;
+    margin-left: 130px;
+}
+#user_name img {
+    vertical-align: middle;
+}
 aside{
     border: black solid 1px;
     border-bottom: none;
     grid-area: aside;
 }
-.logo {color: #3D8D7A;}
+.logo_top{ margin-top: 20px;}
 .material-symbols-outlined {
     color: #1A1A1AB2;
     font-variation-settings:
@@ -283,6 +310,8 @@ header{grid-area: header;}
 aside{grid-area: aside;}
 article{grid-area: article;}
 footer{grid-area:footer;}
+#search{color: #1A1A1A !important;}
+#add{color: #1A1A1A !important;}
 /*aside 부분 정렬 위해 사용*/
 .aside * {
     text-align: right;
