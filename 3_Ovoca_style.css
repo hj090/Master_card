@@ -7,7 +7,7 @@
 /*구분 위해 클래스 추가*/
 body.body-overview{
     background-color: white;
-    min-width: 1200px;
+    min-width: 1500px;
 }
 /*기존 프로그레스 바 이용 (기존보다 약간 길게 변형)*/        
 /*프로그레스바 위치 정렬*/
@@ -92,6 +92,7 @@ body.body-overview{
 /*타이틀영역 구조 정리*/
 #voca_title{
     height: 250px;
+    min-width: 1500px;
     background: linear-gradient(to right, #A3D1C6, #3D8D7A);
     color: white;
     display:flex;
@@ -117,25 +118,27 @@ body.body-overview{
 /*구조 변경(폭을 좀더 좁게)*/
 #card_menu {
     border: 1px solid #3D8D7A;
-    height: 100px;
     background-color: #B3D87A50;
-    margin-bottom: 30px;
-    margin-left: 140px;
-    margin-right: 140px;
     border-radius: 8px;
+    height: 100px;
+    width: 80%;
+    min-width: 1500px;
+    max-width: 1500px;
+    margin: 0 auto 30px;
 }
 /*구조 변경(폭을 좀더 좁게)*/
 .container{
     display: flex;
-    width: 1400px;
+        flex-wrap: wrap;
+    min-width: 1500px;
+    max-width: 1500px;
     gap: 30px;
-    flex-wrap: wrap;
-    margin-left: 143px;
+    margin: 0 auto;
 }
 /*각 카드 스타일 너비 변경*/
 .word{
     border: 1px solid #1A1A1A;
-    width: 256px;
+    width: 350px;
     height: 175px;
     border-radius: 8px;
 }
@@ -172,10 +175,11 @@ body.body-overview{
     margin-top: 60px;
 }
 
-#section{
-    margin-left: 140px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+.control-box{
+    width: 80%;
+    min-width: 1500px;
+    max-width: 1500px;
+    margin: 20px auto 20px;
 }
 /*버튼에 스타일 추가 및 위치 정렬*/
 .green_button{
